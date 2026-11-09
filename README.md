@@ -1,42 +1,60 @@
-# personal-web
+# Axel Pröger — Personal Web
 
-This template should help get you started developing with Vue 3 in Vite.
+> Minimalist developer portfolio: *"Just a punk rock fan who builds websites in his spare time."*  
+> Live at [axelproeger.de](https://axelproeger.de)
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🛠️ Tech Stack
 
-## Recommended Browser Setup
+* **Frontend:** Vue 3 (Composition API, `<script setup lang="ts">`), TypeScript
+* **Styling:** Tailwind CSS v4 (`@tailwindcss/vite`), Lucide Icons
+* **Build Tool:** Vite 8
+* **Typography:** Self-hosted Variable Fonts (`Space Grotesk` & `JetBrains Mono` in WOFF2) — 100% GDPR-compliant with zero external Google requests
+* **Container & Ops:** Docker (Multi-stage, ~26.8 MB image size), Nginx Alpine, optimized for Coolify
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+---
 
-## Type Support for `.vue` Imports in TS
+## ✨ Features & Highlights
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+* **Hard Swiss / Raw Editorial Design:** Intentional typography, disciplined warm color palette (`#F8CC67`, `#201A1A`, `#dc2626`), and zero generic AI clichés.
+* **Ultra-Lightweight & Fast:** Only ~29 KB JavaScript (gzipped), 0 external runtime dependencies or CDNs.
+* **Privacy & GDPR First:** No trackers, no cookies, no third-party font calls.
+* **SEO & Social Sharing:** Full OpenGraph & Twitter Cards metadata with absolute URLs, `robots.txt`, `sitemap.xml`, and canonical links.
+* **Favicon Suite:** Multi-resolution `.ico`, high-DPI `.png`, and Apple Touch Icon generated from avatar.
+* **Production Nginx:** Gzip compression, 1-year immutable caching for Vite assets, and hardened security headers (`nosniff`, `SAMEORIGIN`, etc.).
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🚀 Development
 
-## Project Setup
-
-```sh
+```bash
+# Install dependencies
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Start local dev server (Vite)
 npm run dev
-```
 
-### Type-Check, Compile and Minify for Production
+# Type check
+npm run type-check
 
-```sh
+# Build for production
 npm run build
 ```
+
+---
+
+## 🐳 Docker & Coolify Deployment
+
+The application is preconfigured for direct deployment via Dockerfile on [Coolify](https://coolify.io):
+
+```bash
+# Build Docker image locally
+docker build -t personal-web .
+
+# Run container (port 80)
+docker run -d -p 8080:80 personal-web
+```
+
+* **Coolify Build Pack:** `Dockerfile`
+* **Exposed Port:** `80`

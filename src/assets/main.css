@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+/* Local Self-Hosted Space Grotesk (Variable 300-700) */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/space-grotesk-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/space-grotesk-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Local Self-Hosted JetBrains Mono (Variable 100-800) */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@theme {
+  --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-punk-yellow: #f8cc67;
+  --color-punk-red: #dc2626;
+  --color-dark-bg: #201a1a;
+  --color-dark-surface: #2a2222;
+  --color-dark-border: #3b3030;
+  --color-text-main: #201a1a;
+  --color-text-muted: #574b4b;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8cc67;
+  color: #201a1a;
+}
+
+/* Ripped / Jagged Torn Paper Edges for the Dark Hero Banner */
+.torn-hero {
+  clip-path: polygon(
+    0% 6px,
+    2% 1px,
+    5% 7px,
+    9% 2px,
+    14% 8px,
+    19% 1px,
+    25% 7px,
+    31% 2px,
+    37% 8px,
+    44% 1px,
+    51% 7px,
+    58% 2px,
+    65% 8px,
+    72% 1px,
+    79% 7px,
+    86% 2px,
+    93% 8px,
+    97% 1px,
+    100% 6px,
+    100% calc(100% - 6px),
+    98% 100%,
+    94% calc(100% - 7px),
+    89% calc(100% - 2px),
+    83% calc(100% - 8px),
+    77% calc(100% - 1px),
+    71% calc(100% - 7px),
+    64% calc(100% - 2px),
+    57% calc(100% - 8px),
+    50% calc(100% - 1px),
+    43% calc(100% - 7px),
+    36% calc(100% - 2px),
+    29% calc(100% - 8px),
+    22% calc(100% - 1px),
+    15% calc(100% - 7px),
+    8% calc(100% - 2px),
+    3% calc(100% - 7px),
+    0% calc(100% - 3px)
+  );
+}
+
+/* Subtle clean scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #201a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #f8cc67;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}

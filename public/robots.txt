@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://axelproeger.de/sitemap.xml
+
